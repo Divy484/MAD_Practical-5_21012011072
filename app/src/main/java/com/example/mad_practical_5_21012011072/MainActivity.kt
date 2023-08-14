@@ -4,6 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.CallLog
+import android.provider.ContactsContract
 import android.widget.Button
 import android.widget.EditText
 
@@ -23,6 +25,16 @@ class MainActivity : AppCompatActivity() {
         phn.setOnClickListener {
             call(num.text.toString())
         }
+
+        val cal : Button = findViewById(R.id.callLog)
+        cal.setOnClickListener {
+            callLog()
+        }
+
+        val glr : Button = findViewById(R.id.gallery)
+        glr.setOnClickListener {
+            gallery()
+        }
     }
 
     fun browser(url: String) {
@@ -34,11 +46,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun callLog() {
-
+        Intent(Intent.ACTION_VIEW).setType(ContactsContract.Contacts.CONTENT_TYPE).also { startActivity(it) }
     }
 
     fun gallery() {
-
+        Intent(Intent.ACTION_VIEW).setType("image/*").also { startActivity(it) }
     }
 
     fun camera() {
