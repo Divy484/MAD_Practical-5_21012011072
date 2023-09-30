@@ -1,6 +1,6 @@
 # MAD_Practical-5_21012011072
 
-**Q. What is Intent? Write down types of Intent and types of Intent Action. Create an application which demonstrates implicit Intent for following features. 
+Q. What is Intent? Write down types of Intent and types of Intent Action. Create an application which demonstrates implicit Intent for following features. 
 
 1. Make call to specific number
 
@@ -13,7 +13,8 @@
 5. Set Alarm
 
 6. Open Camera
-**
+
+
 **Ans :-**
 -> Intent is the Process of taking users from one application to another.
 
